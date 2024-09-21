@@ -80,3 +80,6 @@ createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 name: Dream Interpreter Agent
 model: gpt-4o
+cache:
+  enable: true
+description: Agent who can perform Freund's Psychoanalysis or Jungian Dream Interpretation.
