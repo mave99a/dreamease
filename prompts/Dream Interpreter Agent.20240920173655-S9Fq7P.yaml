@@ -73,6 +73,10 @@ outputVariables:
       componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
       componentId: l65uy2o8up7v2x55
       componentName: Photo Gallery Layout
+  - id: BZTx4vX6Bjg0YzthUMxKJ
+    name: $profile
+    initialValue:
+      avatar: 351a916624d04fe202d136065e084292.png
 id: 20240920173655-S9Fq7P
 createdAt: 2024-09-21T00:36:55.711Z
 updatedAt: 2024-09-21T00:36:55.711Z

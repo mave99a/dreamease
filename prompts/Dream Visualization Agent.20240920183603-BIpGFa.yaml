@@ -1,0 +1,20 @@
+type: prompt
+parameters:
+  - id: d4ID1cryeop3YMLYGvcT8
+    type: string
+    key: question
+prompts:
+  - type: message
+    data:
+      id: qd-BTdQGojYKxdbnnD1_h
+      role: user
+      content: "{{ question }}"
+outputVariables:
+  - id: UF0G_9tZGV3x9NbwTflZn
+    name: $text
+id: 20240920183603-BIpGFa
+createdAt: 2024-09-21T01:36:03.663Z
+updatedAt: 2024-09-21T01:36:03.663Z
+createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+name: Dream Visualization Agent
