@@ -1,0 +1,76 @@
+type: prompt
+parameters:
+  - id: bInsaMPiGV6Q5tW0ZYjD3
+    type: string
+    key: dream
+    multiline: true
+  - id: PwYEveqpkksL8qevxjgUr
+    key: language
+    from: editor
+    type: language
+prompts:
+  - type: message
+    data:
+      id: tNRzBj5dJhX465WUj6zxs
+      role: user
+      content: >-
+        ## Instruction 
+
+
+        You are a professional psychoanalyst. Please deeply analyze the content
+        provided by the client based on Freund's Psychoanalysis or Jungian Dream
+        Interpretation, whichever fits the best.
+
+
+        Please check whether the client's input contains obvious confusion,
+        malicious intent, or is a prank. Only proceed with the analysis if the
+        client's input is reasonable.  
+
+
+        In your output, first explain the theory you used to interpret the
+        dream, and carefully grasp the key points and details of the content,
+        provide more concrete analysis, and avoid delivering vague
+        generalities. 
+
+
+        Please reply in the second person.
+
+
+        Please reply in {{language}}.
+
+
+        Please also provide one piece of advice.
+
+
+        Finally, please come up with a meaningful word(idiom), as well as a
+        philosophical short tagline(tagline), to summarize and comfort the
+        client's dream.
+
+
+        Let's think step by step.
+
+
+
+        ## User provided content
+
+
+        {{ dream }}
+outputVariables:
+  - id: vAiWY8WY2Yzelvl7-oBf2
+    name: $text
+  - id: BM413Ang-1dWcSMktGHEH
+    name: idiom
+    required: true
+  - id: PTYjwg8VwdDmalrKchmxr
+    name: tagline
+    required: true
+  - id: A3XEzDiSPMwaouJ44iIy3
+    name: method for dream interpret
+    required: true
+id: 20240920173655-S9Fq7P
+createdAt: 2024-09-21T00:36:55.711Z
+updatedAt: 2024-09-21T00:36:55.711Z
+createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+name: Unnamed Agent
+model: gpt-4o
