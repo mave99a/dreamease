@@ -107,7 +107,7 @@ outputVariables:
       componentName: Journal Output
       componentProperties:
         dwve72z57pebqyru:
-          value: idiom,tagline
+          value: ""
   - id: 2YEE1Urb1U_H4mjSCHl6F
     name: $appearance.input
     appearance:
