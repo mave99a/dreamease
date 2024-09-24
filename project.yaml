@@ -14,3 +14,4 @@ topP: 1
 model: gpt-4o
 appearance:
   primaryColor: ""
+iconVersion: e7df71ac48b609d887d7d92741a1571d

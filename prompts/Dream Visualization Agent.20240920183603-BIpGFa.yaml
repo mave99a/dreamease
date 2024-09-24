@@ -18,3 +18,5 @@ updatedAt: 2024-09-21T01:36:03.663Z
 createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 name: Dream Visualization Agent
+parent:
+  - prompts

@@ -8,6 +8,7 @@ parameters:
     key: language
     from: editor
     type: language
+    defaultValue: English
 prompts:
   - type: message
     data:
@@ -33,13 +34,33 @@ prompts:
         generalities. 
 
 
+        Please first summarize the dream client tell you. 
+
+
+        Then analysis each of the key elements in the dream in details, and
+        explain to them like to students. 
+
+
         Please reply in the second person.
 
 
         Please reply in {{language}}.
 
 
-        Please also provide one piece of advice.
+        Please also provide one piece of general advice.
+
+
+        Please analysis the client's stress level from the dream and if possible
+        suggest some personalized stress relief strategies, e.g.  suggest some
+        time management techniques or like breathing exercises to help the
+        client to  regain a sense of control. ONLY suggest the relevant method
+        for stress relief when necessary.
+
+         The turning them into some actionable insights. 
+
+        If there are early signs of mental health conditions, please suggest the
+        client to visit professionals. If there is no sign, please don't output
+        this part.
 
 
         Finally, please come up with a meaningful word(idiom), as well as a
@@ -56,28 +77,21 @@ prompts:
 
         {{ dream }}
 outputVariables:
-  - id: vAiWY8WY2Yzelvl7-oBf2
-    name: $text
-  - id: BM413Ang-1dWcSMktGHEH
-    name: idiom
-    required: true
   - id: PTYjwg8VwdDmalrKchmxr
     name: tagline
     required: true
+    appearance: {}
+  - id: vAiWY8WY2Yzelvl7-oBf2
+    name: $text
+    appearance: {}
+  - id: BM413Ang-1dWcSMktGHEH
+    name: idiom
+    required: true
+    appearance: {}
   - id: A3XEzDiSPMwaouJ44iIy3
     name: method for dream interpret
     required: true
-  - id: vbTj3yLhdZ11hnIR7UKi6
-    name: $appearance.page
-    appearance:
-      componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
-      componentId: l65uy2o8up7v2x55
-      componentName: Photo Gallery Layout
-  - id: BZTx4vX6Bjg0YzthUMxKJ
-    name: $profile
-    initialValue:
-      avatar: 351a916624d04fe202d136065e084292.png
-id: 20240920173655-S9Fq7P
+id: 20240921235628-LuUDnn
 createdAt: 2024-09-21T00:36:55.711Z
 updatedAt: 2024-09-21T00:36:55.711Z
 createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
@@ -87,3 +101,7 @@ model: gpt-4o
 cache:
   enable: true
 description: Agent who can perform Freund's Psychoanalysis or Jungian Dream Interpretation.
+access:
+  noLoginRequired: true
+parent:
+  - prompts

@@ -1,0 +1,184 @@
+type: function
+parameters:
+  - id: bInsaMPiGV6Q5tW0ZYjD3
+    type: string
+    key: question
+    multiline: true
+    required: true
+    placeholder: What did you dream about?
+  - id: PwYEveqpkksL8qevxjgUr
+    key: language
+    from: editor
+    type: language
+    defaultValue: English
+prompts:
+  tNRzBj5dJhX465WUj6zxs:
+    index: 0
+    data:
+      type: message
+      data:
+        id: tNRzBj5dJhX465WUj6zxs
+        role: user
+        content: >-
+          ## Instruction
+
+
+          You are a professional psychoanalyst. Please deeply analyze the
+          content provided by the client based on Freund's Psychoanalysis or
+          Jungian Dream Interpretation, whichever fits the best.
+
+
+          Please check whether the client's input contains obvious confusion,
+          malicious intent, or is a prank. Only proceed with the analysis if the
+          client's input is reasonable.  
+
+
+          In your output, first explain the theory you used to interpret the
+          dream, and carefully grasp the key points and details of the content,
+          provide more concrete analysis, and avoid delivering vague
+          generalities. 
+
+
+          Please reply in the second person.
+
+
+          Please reply in {{language}}.
+
+
+          Please also provide one piece of advice.
+
+
+          Finally, please come up with a meaningful word(idiom), as well as a
+          philosophical short tagline(tagline), to summarize and comfort the
+          client's dream.
+
+
+          Let's think step by step.
+
+
+
+          ## User provided content
+
+
+          {{ dream }}
+outputVariables:
+  - id: BM413Ang-1dWcSMktGHEH
+    name: idiom
+    required: false
+    appearance:
+      componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
+      componentId: a4oldpoxv7bikvpj
+      componentName: Markdown View
+      componentProperties:
+        hwfrkh870vsysdyd:
+          value: "21"
+  - id: EN1fnA1XjF2Ud64Pgpx6_
+    name: $text
+    appearance:
+      componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
+      componentId: a4oldpoxv7bikvpj
+      componentName: Markdown View
+      componentProperties:
+        hwfrkh870vsysdyd:
+          value: "14"
+  - id: PTYjwg8VwdDmalrKchmxr
+    name: tagline
+    required: false
+    appearance:
+      componentId: 63ioiyxubu6516gr
+      componentName: Tags View
+  - id: A3XEzDiSPMwaouJ44iIy3
+    name: method for dream interpret
+    required: false
+  - id: vbTj3yLhdZ11hnIR7UKi6
+    name: $appearance.page
+    appearance:
+      componentId: ozysjdt3si33azdl
+      componentName: Journal Layout
+  - id: BZTx4vX6Bjg0YzthUMxKJ
+    name: $profile
+    initialValue:
+      avatar: 351a916624d04fe202d136065e084292.png
+      name: ""
+  - id: _ryybZn1RoK4FKlf3nVs3
+    name: $appearance.output
+    appearance:
+      componentId: bz1oeey7mwwue1eg
+      componentName: Journal Output
+      componentProperties:
+        dwve72z57pebqyru:
+          value: idiom,tagline
+  - id: 2YEE1Urb1U_H4mjSCHl6F
+    name: $appearance.input
+    appearance:
+      componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
+      componentId: 1wwtemqcdio6nqf0
+      componentName: Auto Form
+      componentProperties:
+        oxn70b4fonu8223h:
+          value: true
+        wd7bj76kom8y46cj:
+          value: true
+        4y8wjmju1pllq6f1:
+          value: false
+        otf831cy4ebbdwil:
+          value: true
+        a1pldnt6iwmfghqc:
+          value: Interpret Dream
+  - id: Q-VNrph7AZ9BcNNbqIhcl
+    name: $share
+    initialValue:
+      items:
+        - to: link
+        - to: twitter
+      shareAttachUrl: true
+    appearance:
+      componentBlockletDid: z2qa6fvjmjew4pWJyTsKaWFuNoMUMyXDh5A1D
+      componentId: jfq3df9z8lkk9not
+      componentName: Share View
+  - id: b-ZByZicDnXe51EBAIaZD
+    name: $images
+id: 20240920173655-S9Fq7P
+createdAt: 2024-09-21T00:36:55.711Z
+updatedAt: 2024-09-21T00:36:55.711Z
+createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
+name: What's in your dream?
+model: gpt-4o
+cache:
+  enable: false
+description: Share the detail of your dream and let me analyze for you...
+access:
+  noLoginRequired: true
+code: >
+  const result = await runAgent({
+    streaming: true,
+    agentId: '20240921235628-LuUDnn',
+    inputs: {
+      dream: question,
+      language,
+    },
+  });
+
+
+  return {
+    ...result,
+    $images: [
+      {
+        url: withQuery(
+          'https://bbqa6gfwoe7o5sc7s2hilyjyuu2qxlftgfy4adaafxi.did.abtnet.io/nft-blender/api/templates/preview/-glD9cq0UYmxgd7J66YfL',
+          {
+            sn: crypto.randomInt(1, 6),
+            dynamicData: JSON.stringify({
+              date: new Date().toLocaleDateString(),
+              title: result.idiom?.slice(0, 100),
+              content: result.$text?.slice(0, 100),
+              tags: result.tagline,
+            }),
+          }
+        ),
+      },
+    ],
+  };
+parent:
+  - prompts
