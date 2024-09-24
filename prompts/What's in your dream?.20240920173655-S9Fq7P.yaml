@@ -166,7 +166,7 @@ code: >
     $images: [
       {
         url: withQuery(
-          'https://bbqa6gfwoe7o5sc7s2hilyjyuu2qxlftgfy4adaafxi.did.abtnet.io/nft-blender/api/templates/preview/-glD9cq0UYmxgd7J66YfL',
+          'https://www.aigne.io/nft-blender/api/templates/preview/gchluJPH2P3Ivj7RzHOke',
           {
             sn: crypto.randomInt(1, 6),
             dynamicData: JSON.stringify({
