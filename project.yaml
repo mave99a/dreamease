@@ -1,3 +1,5 @@
+banner: 650a32100f085abd916c863a101a7f06.png
+readme: ""
 id: "492494313737945088"
 name: DreamEase
 description: DreamEase is an innovative AI-powered app designed to help
@@ -6,7 +8,7 @@ description: DreamEase is an innovative AI-powered app designed to help
   techniques such as dream interpretation and free association, DreamEase offers
   a unique pathway to mental relaxation and emotional well-being.
 createdAt: 2024-09-21T00:36:34.498Z
-updatedAt: 2024-09-21T00:36:34.498Z
+updatedAt: 2024-11-04T07:04:02.741Z
 createdBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 updatedBy: z1oHa79x3H6vxv9hfW8bHczPmwHKfAaRRmS
 temperature: 1
@@ -15,4 +17,8 @@ model: gpt-4o
 appearance:
   primaryColor: "#dce775"
   secondaryColor: "#dce775"
-iconVersion: a59fbc6e3844ab2577f64d44ce2dd759
+  typography:
+    heading:
+      fontFamily: Recursive
+    fontFamily: Open Sans
+iconVersion: d61d7e0b45f79135b0ef7e1e14a802e6
